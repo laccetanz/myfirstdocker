@@ -12,7 +12,7 @@ services:
     environment:
       - TZ=UTC  # Set timezone if needed
     volumes:
-      - ./app:./portainer/Files/Subito-searcher #for my portainer config
+      - ./app:./portainer/Downloads/Test #for my portainer config
     ports:
       - "5000:5000"
     networks:
