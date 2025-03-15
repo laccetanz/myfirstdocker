@@ -8,9 +8,11 @@ services:
     environment:
       - TZ=UTC  # Set timezone if needed
     volumes:
-      - ./data:/app/data  # Mount local script (optional)
+      - .:./portainer/Files/Subito-searcher
     ports:
       - "5000:5000"
+    networs:
+      driver: bridge
     logging:
       driver: "json-file"
       options:

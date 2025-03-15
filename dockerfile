@@ -7,18 +7,21 @@ WORKDIR /app
 #copy aux files
 #COPY searches.tracked .
 #COPY telegram_api_credentials .
-RUN mkdir -p /app/templates
-COPY /templates/index.html /templates 
+#RUN mkdir -p /app/templates
+#COPY /templates/index.html /templates 
 
 # Copy the requirements file first (to leverage Docker caching)
-COPY requirements.txt .
+#COPY requirements.txt .
+
+#Copy all
+COPY . .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application files
-COPY subito-searcher.py .
-COPY app.py .
+#COPY subito-searcher.py .
+#COPY app.py .
 
 EXPOSE 5000
 
