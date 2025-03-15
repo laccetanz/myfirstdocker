@@ -9,6 +9,8 @@ services:
       - TZ=UTC  # Set timezone if needed
     volumes:
       - ./data:/app/data  # Mount local script (optional)
+    ports:
+      - "5000:5000"
     logging:
       driver: "json-file"
       options:
