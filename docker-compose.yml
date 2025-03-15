@@ -8,11 +8,11 @@ services:
     environment:
       - TZ=UTC  # Set timezone if needed
     volumes:
-      - .:./portainer/Files/Subito-searcher
+      - .:./portainer/Files/Subito-searcher #for my portainer config
     ports:
       - "5000:5000"
     networks:
-      driver: bridge
+      - bridge #needs to be created
     logging:
       driver: "json-file"
       options:
