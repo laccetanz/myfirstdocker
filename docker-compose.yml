@@ -1,5 +1,9 @@
 version: '3.8'
 
+networks:
+  bridge:
+    driver: bridge
+
 services:
   python-script:
     container_name: subito-searcher-web
