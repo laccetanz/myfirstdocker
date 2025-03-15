@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Server Flask</title>
+    <style>
+        .box {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: lightblue;
+            display: inline-block;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Inserisci il testo</h2>
+    <form method="POST">
+        <input type="text" name="input_text" value="{{ text }}">
+        <button type="submit">Esegui</button>
+        <button type="submit" name="clear">Cancella</button>
+    </form>
+
+    {% if show_box %}
+        <h3>Output dello script:</h3>
+        <textarea id="outputBox" rows="1" cols="200" readonly>{{ output }}</textarea>
+    {% endif %}
+</body>
+</html>
+<script>
+    function resizeTextarea() {
+        var textarea = document.getElementById("outputBox");
+        textarea.style.height = "auto"; // Resetta l'altezza
+        textarea.style.height = (textarea.scrollHeight) + "px"; // Imposta l'altezza in base al contenuto
+    }
+
+    // Chiamare la funzione al caricamento della pagina
+    window.onload = resizeTextarea;
+</script>
