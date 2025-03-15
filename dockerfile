@@ -8,7 +8,7 @@ WORKDIR /app
 #COPY searches.tracked .
 #COPY telegram_api_credentials .
 RUN mkdir -p /app/templates
-COPY /templates /templates 
+COPY /templates/index.html /templates 
 
 # Copy the requirements file first (to leverage Docker caching)
 COPY requirements.txt .
