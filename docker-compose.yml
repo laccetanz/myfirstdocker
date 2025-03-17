@@ -14,7 +14,7 @@ services:
     ports:
       - "5000:5000"      
     volumes:
-      - ./portainer/Files/AppData/Config/subito:./app # for my portainer config
+      - ./app:./portainer/Files/AppData/Config/subito # for my portainer config
     networks:
       - bridge #needs to be created
     logging:
