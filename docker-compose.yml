@@ -13,8 +13,14 @@ services:
       - TZ=UTC  # Set timezone if needed
     ports:
       - "5000:5000"      
+    #volumes:
+    #  - .:/portainer/Files/AppData/Config/subito # for my portainer config
     volumes:
-      - .:/portainer/Files/AppData/Config/subito # for my portainer config
+      - type: bind
+        source: "./"
+        target: "/portainer/Files/AppData/Config/subito/"
+        bind:
+          propagation: "shared"
     networks:
       - bridge #needs to be created
     logging:
