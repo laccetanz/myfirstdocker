@@ -2,10 +2,10 @@
 FROM python:3.11-slim
 
 # Add a /app volume
-VOLUME ["/app"]
+# VOLUME ["/app"]
 
 # Set the working directory
-WORKDIR /app
+# WORKDIR /app
 
 # Copy all files
 COPY . .
