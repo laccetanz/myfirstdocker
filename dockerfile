@@ -2,13 +2,13 @@
 FROM python:3.11-slim
 
 # Add a /app volume #rem
-VOLUME ["/subito/app"]
+VOLUME ["/subito"]
 
 # Set the working directory #rem
-WORKDIR /subito 
+WORKDIR /subito
 
 # Copy all files #. .
-COPY . /app/  
+COPY . /subito
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
@@ -17,4 +17,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Set the command to run the script
-CMD ["python", "app/app.py"]
+CMD ["python", "app.py"]
