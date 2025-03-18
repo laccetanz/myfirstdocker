@@ -5,7 +5,7 @@ FROM python:3.11-slim
 VOLUME ["/subito/app"]
 
 # Set the working directory #rem
-WORKDIR /app 
+WORKDIR /subito 
 
 # Copy all files #. .
 COPY . /app/  
@@ -17,4 +17,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Set the command to run the script
-CMD ["python", "app.py"]
+CMD ["python", "app/app.py"]
