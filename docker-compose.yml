@@ -6,20 +6,17 @@ networks:
 
 services:
   python-script:
-    container_name: subito-searcher-web
+    container_name: subito
     build: .
     restart: unless-stopped
-    environment:
-      - TZ=UTC  # Set timezone if needed
     ports:
-      - "5000:5000"      
-    volumes: #source:destination
-      - /portainer/Files/AppData/Config/subito:/subito # for my portainer config
+      - "5000:5000"
+    # volume source:destination
+    volumes: 
+    #  - /portainer/Files/AppData/Config/subito:/subito # for my portainer config
     # ok working old - .:/portainer/Files/AppData/Config/subito # for my portainer config
-    networks:
-      - bridge #needs to be created
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
+      - type: bind
+        source: /portainer/Files/AppData/Config/Subito/app  # <host_path>
+        target: /usr/src/app # <container_path>    
+    networks: # needs to be created
+      - bridge
