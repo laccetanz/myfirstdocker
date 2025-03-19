@@ -2,7 +2,7 @@
 FROM python:slim
 
 # Add a /app volume
-# VOLUME ["/subito"]
+VOLUME ["/usr/src/app"] # /subito
 
 # Set the working directory #rem
 WORKDIR /usr/src/app
