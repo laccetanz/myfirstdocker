@@ -7,13 +7,13 @@ FROM python:slim
 # Set the working directory #rem
 WORKDIR /usr/src/app
 
-# Copy all files #. .
-# COPY . /subito
+# Copy req files # . .
 COPY requirements.txt ./
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy alll files
 COPY . .
 
 # Expose Flask Port
