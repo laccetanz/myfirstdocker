@@ -8,14 +8,13 @@ VOLUME ["/usr/src/app"] # /subito
 WORKDIR /usr/src/app
 
 # Copy req files # . .
-COPY . ./
-# COPY requirements.txt ./
+COPY requirements.txt ./
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy all files from source to relative path
-# COPY . /usr/src/app/
+COPY . /usr/src/app/
 
 # Expose Flask Port
 EXPOSE 5000
