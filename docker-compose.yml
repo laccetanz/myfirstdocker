@@ -18,4 +18,4 @@ services:
         source: /portainer/Files/AppData/Config/Subito  # <host_path>
         target: /usr/src/app     # <container_path>    
     networks: # needs to be created
-    #  - bridge
+      - bridge
