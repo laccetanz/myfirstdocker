@@ -20,4 +20,4 @@ COPY . .
 EXPOSE 5000
 
 # Set the command to run the script
-CMD ["python", "./app.py"]
+CMD ["python", "app.py"]
