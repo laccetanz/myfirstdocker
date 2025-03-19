@@ -16,7 +16,7 @@ services:
     #  - /portainer/Files/AppData/Config/subito:/subito # for my portainer config
     # ok working old - .:/portainer/Files/AppData/Config/subito # for my portainer config
       - type: bind
-        source: /portainer/Files/AppData/Config/Subito/app  # <host_path>
+        source: /portainer/Files/AppData/Config/Subito  # <host_path>
         target: /usr/src/app # <container_path>    
     networks: # needs to be created
       - bridge
