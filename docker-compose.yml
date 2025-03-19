@@ -17,5 +17,5 @@ services:
       - type: bind
         source: /portainer/Files/AppData/Config/Subito  # <host_path>
         target: /usr/src/app     # <container_path>    
-    networks: bridge # needs to be created
-    #  - bridge
+#    networks: bridge # needs to be created
+#    #  - bridge
