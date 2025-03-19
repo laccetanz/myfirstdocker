@@ -10,13 +10,12 @@ services:
     build: .
     restart: unless-stopped
     ports:
-      - "5000:5000"
-    # volume source:destination
-    volumes: 
-    #  - /portainer/Files/AppData/Config/subito:/subito # for my portainer config
+      - "5000:5000"    
+    volumes: # source:destination # ./ relative / absolute
+    #  - /portainer/Files/AppData/Config/Subito:/subito # for my portainer config
     # ok working old - .:/portainer/Files/AppData/Config/subito # for my portainer config
       - type: bind
         source: /portainer/Files/AppData/Config/Subito  # <host_path>
-        target: /usr/src/app # <container_path>    
+        target: /usr/src/app     # <container_path>    
     networks: # needs to be created
       - bridge
