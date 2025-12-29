@@ -8,7 +8,7 @@ FROM python:slim
 WORKDIR /app
 
 # Copy req files # . .
-COPY requirements.txt ./
+COPY requirements.txt .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
