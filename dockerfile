@@ -2,10 +2,10 @@
 FROM python:slim
 
 # Add a /app volume
-VOLUME ["/usr/src/app"] # /subito
+# VOLUME ["/usr/src/app"] # /subito
 
 # Set the working directory #rem
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy req files # . .
 COPY requirements.txt ./
