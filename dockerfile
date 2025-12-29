@@ -7,14 +7,11 @@ FROM python:slim
 # Set the working directory #rem
 WORKDIR /app
 
-# Copy req files # . .
-COPY requirements.txt .
+# Copy all files from source to relative path (workdir)
+COPY . .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy all files from source to relative path (workdir)
-COPY . .
 
 # Expose Flask Port
 EXPOSE 5000
