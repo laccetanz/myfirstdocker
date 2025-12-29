@@ -1,5 +1,5 @@
 # Use an official Python runtime as a base image
-FROM python:slim
+FROM python:3.10-slim
 
 # Add a /app volume
 # VOLUME ["/usr/src/app"] # /subito
