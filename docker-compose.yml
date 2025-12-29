@@ -1,7 +1,11 @@
+# networks:
+#  bridge:
+#    driver: bridge
 networks:
+  default:
   bridge:
-    driver: bridge
-
+    external: true
+    
 services:
   python-script:
     container_name: subito
@@ -16,5 +20,5 @@ services:
         # source: /portainer/Files/AppData/Config/Subito  # <host_path>
         source: /DATA/AppData/Subito  # <host_path>
         target: /app     # <container_path>    
-    networks: # needs to be created
-      - bridge
+#    networks: # needs to be created
+#      - bridge
